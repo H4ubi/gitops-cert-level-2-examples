@@ -6,7 +6,7 @@ spec:
   syncPolicy:
     applicationsSync:
       automated: prune
-  syncOptions:
+    syncOptions:
     - CreateNamespace=true
   generators:
     # matrix 'parent' generator
