@@ -22,6 +22,7 @@ spec:
       syncPolicy:
         applicationsSync:
           automated: prune
+          selfHeal: true
         syncOptions:
         - CreateNamespace=true
       project: '{{metadata.labels.environment}}'
