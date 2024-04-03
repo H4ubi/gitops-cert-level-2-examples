@@ -18,13 +18,13 @@ spec:
   template:
     metadata:
       name: '{{path.basename}}-{{name}}'
+    syncPolicy:
+      applicationsSync:
+        automated: prune
+        selfHeal: true
+      syncOptions:
+      - CreateNamespace=true
     spec:
-      syncPolicy:
-        applicationsSync:
-          automated: prune
-          selfHeal: true
-        syncOptions:
-        - CreateNamespace=true
       project: '{{metadata.labels.environment}}'
       source:
         repoURL: https://github.com/codefresh-contrib/gitops-cert-level-2-examples.git
